@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{09F576F2-A36C-438A-9248-600051FC2D9D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ReliefMapping.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ReliefMapping">
+        <MSBuild Projects="ReliefMapping.dproj"/>
+    </Target>
+    <Target Name="ReliefMapping:Clean">
+        <MSBuild Projects="ReliefMapping.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReliefMapping:Make">
+        <MSBuild Projects="ReliefMapping.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ReliefMapping"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ReliefMapping:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ReliefMapping:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

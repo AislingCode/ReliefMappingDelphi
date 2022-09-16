@@ -32,11 +32,11 @@ const
   EDGERADIUSSWITCH: TParam = (Name: '-edge_radius'; ParamType: TParamType.TInteger; IsMandatory: false);
   EDGESCALESWITCH: TParam = (Name: '-edge-scale'; ParamType: TParamType.TFloat; IsMandatory: false);
   // Error messages
-  PARAMNOTRECOGNIZEDEXCEPTION = 'Parameter is not recognized: ';
-  PARAMVALUENOTSUPPLIED = 'Parameter value is not supplied: ';
-  PARAMFLOATFORMATEXCEPTION = 'Parameter value is invalid for a floating point: ';
-  PARAMINTFORMATEXCEPTION = 'Parameter value is invalid for an integer: ';
-  MANDATORYPARAMMISSING = 'Mandatory parameter value is not set: ';
+  PARAMNOTRECOGNIZEDEXCEPTION = 'Parameter not recognized: ';
+  PARAMVALUENOTSUPPLIED = 'Parameter value not supplied: ';
+  PARAMFLOATFORMATEXCEPTION = 'Parameter value invalid for a floating point: ';
+  PARAMINTFORMATEXCEPTION = 'Parameter value invalid for an integer: ';
+  MANDATORYPARAMMISSING = 'Mandatory parameter value not set: ';
 
 var
   // Command line parameters will be contained in a string dictionary, because

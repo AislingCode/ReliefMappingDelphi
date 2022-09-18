@@ -1,0 +1,49 @@
+package GLScene_Sounds_RT;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'GLScene Sound Managers'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  rtl,
+  GLScene_RT;
+
+contains
+  Sounds.FMODImport in '..\Source\Sounds.FMODImport.pas',
+  Sounds.FMODpresets in '..\Source\Sounds.FMODpresets.pas',
+  Sounds.FMODtypes in '..\Source\Sounds.FMODtypes.pas',
+  Sounds.FMODerrors in '..\Source\Sounds.FMODerrors.pas',
+  Sounds.OpenALImport in '..\Source\Sounds.OpenALImport.pas',
+  Sounds.BASS in '..\Source\Sounds.BASS.pas',
+  Sounds.FMOD in '..\Source\Sounds.FMOD.pas',
+  Sounds.OpenAL in '..\Source\Sounds.OpenAL.pas',
+  Sounds.WaveOut in '..\Source\Sounds.WaveOut.pas',
+  Sounds.BASSImport in '..\Source\Sounds.BASSImport.pas';
+
+end.

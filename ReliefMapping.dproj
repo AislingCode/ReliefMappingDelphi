@@ -2,7 +2,7 @@
     <PropertyGroup>
         <ProjectGuid>{FAFF0F91-3D05-45F8-BFF8-E014ABCDFF58}</ProjectGuid>
         <ProjectVersion>19.2</ProjectVersion>
-        <FrameworkType>None</FrameworkType>
+        <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
@@ -47,7 +47,7 @@
         <DCC_S>false</DCC_S>
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
         <SanitizedProjectName>ReliefMapping</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -88,6 +88,76 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="Colors.pas"/>
+        <DCCReference Include="GLMultiPolygon.pas"/>
+        <DCCReference Include="Materials.pas"/>
+        <DCCReference Include="VectorGeometry.pas"/>
+        <DCCReference Include="VectorTypes.pas"/>
+        <DCCReference Include="GLScene\Source\Cg.BombShader.pas"/>
+        <DCCReference Include="GLScene\Source\Cg.GL.pas"/>
+        <DCCReference Include="GLScene\Source\Cg.Import.pas"/>
+        <DCCReference Include="GLScene\Source\Cg.PostTransformationShader.pas"/>
+        <DCCReference Include="GLScene\Source\Cg.Register.pas"/>
+        <DCCReference Include="GLScene\Source\Cg.Shader.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.APIComps.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.Compiler.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.Context.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.DataAccess.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.EditorFm.pas">
+            <Form>GLCUDAEditorForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="GLScene\Source\CUDA.FFTPlan.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.FourierTransform.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.Graphics.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.Import.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.ParallelPrimitives.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.Parser.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.PropEditors.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.Register.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.Runtime.pas"/>
+        <DCCReference Include="GLScene\Source\CUDA.Utility.pas"/>
+        <DCCReference Include="GLScene\Source\DWS.Classes.pas"/>
+        <DCCReference Include="GLScene\Source\DWS.HelperFunc.pas"/>
+        <DCCReference Include="GLScene\Source\DWS.Objects.pas"/>
+        <DCCReference Include="GLScene\Source\DWS.OpenGL.pas"/>
+        <DCCReference Include="GLScene\Source\DWS.Scene.pas"/>
+        <DCCReference Include="GLScene\Source\DWS.Script.pas"/>
+        <DCCReference Include="GLScene\Source\DWS.VectorGeometry.pas"/>
+        <DCCReference Include="GLScene\Source\FLibMaterialPicker.pas">
+            <Form>GLLibMaterialPickerForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="GLScene\Source\FmGuiLayoutEditor.pas">
+            <Form>GLLayoutEditorForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="GLScene\Source\FmGuiSkinEditor.pas">
+            <Form>GLSkinEditorForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="GLScene\Source\FmInfo.pas">
+            <Form>GLInfoForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <None Include="GLScene\Packages\GR32_RT.dpk"/>
+        <None Include="GLScene\Packages\GR32_DT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Sounds_RT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Sounds_DT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_SDL_RT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_SDL_DT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_SDL2Frame.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Scripts_RT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Scripts_DT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_RT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Physics_RT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Physics_DT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Parallel_RT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Parallel_DT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_DT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Cg_RT.dpk"/>
+        <None Include="GLScene\Packages\GLScene_Cg_DT.dpk"/>
+        <None Include="GLScene\Help\GLSysHelp\GLSysHelp.pds"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -110,8 +180,51 @@
                 </Source>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
+                <DeployFile LocalName="GLScene\Packages\GLScene_Sounds_RT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_Sounds_DT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_RT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_Physics_DT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_Physics_RT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GR32_RT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_DT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_Cg_DT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -128,6 +241,71 @@
                 <DeployFile LocalName="Win32\Debug\ReliefMapping.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>ReliefMapping.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_SDL_DT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_SDL2Frame.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_Scripts_RT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_Parallel_DT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_Cg_RT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_SDL_RT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GR32_DT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_Scripts_DT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Packages\GLScene_Parallel_RT.dpk" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GLScene\Help\GLSysHelp\GLSysHelp.pds" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -906,6 +1084,7 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
+            <ModelSupport>False</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

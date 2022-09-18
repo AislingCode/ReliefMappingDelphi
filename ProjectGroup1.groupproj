@@ -1,0 +1,240 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8D37A8AC-02C7-475B-99D6-8799C0F98B36}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ReliefMapping.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GR32_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_DT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GR32_DT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Sounds_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Sounds_DT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_SDL_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_SDL_DT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_SDL2Frame.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Scripts_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Scripts_DT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Physics_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Physics_DT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Parallel_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Parallel_DT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Cg_RT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GLScene\Packages\GLScene_Cg_DT.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ReliefMapping">
+        <MSBuild Projects="ReliefMapping.dproj"/>
+    </Target>
+    <Target Name="ReliefMapping:Clean">
+        <MSBuild Projects="ReliefMapping.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReliefMapping:Make">
+        <MSBuild Projects="ReliefMapping.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GR32_RT">
+        <MSBuild Projects="GLScene\Packages\GR32_RT.dproj"/>
+    </Target>
+    <Target Name="GR32_RT:Clean">
+        <MSBuild Projects="GLScene\Packages\GR32_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GR32_RT:Make">
+        <MSBuild Projects="GLScene\Packages\GR32_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_DT">
+        <MSBuild Projects="GLScene\Packages\GLScene_DT.dproj"/>
+    </Target>
+    <Target Name="GLScene_DT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_DT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_DT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_DT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GR32_DT">
+        <MSBuild Projects="GLScene\Packages\GR32_DT.dproj"/>
+    </Target>
+    <Target Name="GR32_DT:Clean">
+        <MSBuild Projects="GLScene\Packages\GR32_DT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GR32_DT:Make">
+        <MSBuild Projects="GLScene\Packages\GR32_DT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Sounds_RT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Sounds_RT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Sounds_RT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Sounds_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Sounds_RT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Sounds_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Sounds_DT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Sounds_DT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Sounds_DT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Sounds_DT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Sounds_DT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Sounds_DT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_SDL_RT">
+        <MSBuild Projects="GLScene\Packages\GLScene_SDL_RT.dproj"/>
+    </Target>
+    <Target Name="GLScene_SDL_RT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_SDL_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_SDL_RT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_SDL_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_SDL_DT">
+        <MSBuild Projects="GLScene\Packages\GLScene_SDL_DT.dproj"/>
+    </Target>
+    <Target Name="GLScene_SDL_DT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_SDL_DT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_SDL_DT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_SDL_DT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_SDL2Frame">
+        <MSBuild Projects="GLScene\Packages\GLScene_SDL2Frame.dproj"/>
+    </Target>
+    <Target Name="GLScene_SDL2Frame:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_SDL2Frame.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_SDL2Frame:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_SDL2Frame.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Scripts_RT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Scripts_RT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Scripts_RT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Scripts_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Scripts_RT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Scripts_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Scripts_DT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Scripts_DT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Scripts_DT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Scripts_DT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Scripts_DT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Scripts_DT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_RT">
+        <MSBuild Projects="GLScene\Packages\GLScene_RT.dproj"/>
+    </Target>
+    <Target Name="GLScene_RT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_RT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Physics_RT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Physics_RT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Physics_RT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Physics_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Physics_RT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Physics_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Physics_DT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Physics_DT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Physics_DT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Physics_DT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Physics_DT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Physics_DT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Parallel_RT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Parallel_RT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Parallel_RT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Parallel_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Parallel_RT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Parallel_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Parallel_DT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Parallel_DT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Parallel_DT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Parallel_DT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Parallel_DT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Parallel_DT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Cg_RT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Cg_RT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Cg_RT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Cg_RT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Cg_RT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Cg_RT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GLScene_Cg_DT">
+        <MSBuild Projects="GLScene\Packages\GLScene_Cg_DT.dproj"/>
+    </Target>
+    <Target Name="GLScene_Cg_DT:Clean">
+        <MSBuild Projects="GLScene\Packages\GLScene_Cg_DT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GLScene_Cg_DT:Make">
+        <MSBuild Projects="GLScene\Packages\GLScene_Cg_DT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ReliefMapping;GR32_RT;GLScene_DT;GR32_DT;GLScene_Sounds_RT;GLScene_Sounds_DT;GLScene_SDL_RT;GLScene_SDL_DT;GLScene_SDL2Frame;GLScene_Scripts_RT;GLScene_Scripts_DT;GLScene_RT;GLScene_Physics_RT;GLScene_Physics_DT;GLScene_Parallel_RT;GLScene_Parallel_DT;GLScene_Cg_RT;GLScene_Cg_DT"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ReliefMapping:Clean;GR32_RT:Clean;GLScene_DT:Clean;GR32_DT:Clean;GLScene_Sounds_RT:Clean;GLScene_Sounds_DT:Clean;GLScene_SDL_RT:Clean;GLScene_SDL_DT:Clean;GLScene_SDL2Frame:Clean;GLScene_Scripts_RT:Clean;GLScene_Scripts_DT:Clean;GLScene_RT:Clean;GLScene_Physics_RT:Clean;GLScene_Physics_DT:Clean;GLScene_Parallel_RT:Clean;GLScene_Parallel_DT:Clean;GLScene_Cg_RT:Clean;GLScene_Cg_DT:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ReliefMapping:Make;GR32_RT:Make;GLScene_DT:Make;GR32_DT:Make;GLScene_Sounds_RT:Make;GLScene_Sounds_DT:Make;GLScene_SDL_RT:Make;GLScene_SDL_DT:Make;GLScene_SDL2Frame:Make;GLScene_Scripts_RT:Make;GLScene_Scripts_DT:Make;GLScene_RT:Make;GLScene_Physics_RT:Make;GLScene_Physics_DT:Make;GLScene_Parallel_RT:Make;GLScene_Parallel_DT:Make;GLScene_Cg_RT:Make;GLScene_Cg_DT:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
